@@ -13,7 +13,8 @@ import org.springframework.security.web.server.SecurityWebFilterChain;
 public class SecurityConfig {
     @Bean
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity security){
-        security.authorizeExchange().anyExchange()
+        security.authorizeExchange()
+                .anyExchange()
                 .authenticated()
                 .and()
                 .oauth2Client()
